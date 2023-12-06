@@ -36,7 +36,7 @@ Data Processing:
 Feature Engineering and Outlier Detection are major processes done then the data is processed through nltk library.
 
 Model Builiding:
-It is done by the above mentioned algorithms.
+It is done by the above mentioned 5 algorithms.
 
 Finally SVC Model is depolyed through Streamlit Sharing.
 
