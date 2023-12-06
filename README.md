@@ -1,6 +1,6 @@
 # SMS_CLASSIFIER
 
-## 🚀 Introducing the SMS CLASSIFIER Model 🚀 
+##  Introducing the SMS CLASSIFIER Model 
 I'm excited to share my latest project – a powerful SMS CLASSIFIER that boasts an impressive 98% accuracy! 📊. This SMS CLASSIFIER comes under the Text Classification which is a Problem Of NATURAL LANGUAGE PROCESSING.
 
 ## Project Highlights:
@@ -9,7 +9,7 @@ I'm excited to share my latest project – a powerful SMS CLASSIFIER that boasts
 
 🧠 Smart Learning with NLTK: Harnessing the Natural Language Toolkit (NLTK), the model is equipped with advanced NLP techniques, allowing it to understand and analyze the nuances of human language. NLTK's rich set of tools facilitates robust pre-processing and feature extraction.
 
-🎯 High Accuracy, High Confidence: The classifier achieved a staggering 98% accuracy during testing, demonstrating its efficacy in distinguishing between  Spam and Non spam messages. This high accuracy ensures reliable performance in real-world scenarios.
+🎯 High Accuracy: The classifier achieved a staggering 98% accuracy during testing, demonstrating its efficacy in distinguishing between  Spam and Non spam messages. This high accuracy ensures reliable performance in real-world scenarios.
 
 I'm thrilled to share that this SMS Classifier is now available for interactive use through a Streamlit web app! 🌐
 
@@ -23,12 +23,15 @@ I'm thrilled to share that this SMS Classifier is now available for interactive 
 Out of the above 5 mentioned algorithms Support Vector Algorithm Stood at top with an astounding 98% accuracy.
 Random Forest Classifier also did well with an accuracy of 97%.
 ### Detailed info of project:
->> A Spam Dataset is taken from kaggle and it is preproccesed using nltk library.
->> Model Builiding is done by the above mentioned algorithms.
->> Finally SVC model is depolyed through Streamlit Sharing.
+A Spam Dataset is taken from kaggle.It went through Data Processing and Model Building steps.
+Data Processing:
+Feature Engineering and Outlier Detection are major processes done then the data is processed through nltk library
+Model Builiding:
+It is done by the above mentioned algorithms.
+Finally SVC Model is depolyed through Streamlit Sharing.
+SVC Model depolyed locally through streamlit and globally through Streamlit Sharing.
 ## App Features:
 User-Friendly Interface: The Streamlit app provides an intuitive interface for users to input messages and receive instant predictions on whether they are Spam or Non spam.
-
 Accessible Anytime, Anywhere: Once deployed, the app is accessible from any device with an internet connection, allowing you to showcase your classifier to a wider audience.
 ## Link for accessing model:
 You can my access model through : https://sriramsmsclassifier.streamlit.app/
