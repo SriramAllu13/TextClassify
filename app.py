@@ -8,6 +8,7 @@ from nltk.stem.porter import PorterStemmer
 
 ps=PorterStemmer()
 
+
 vector=pickle.load(open('vector.pkl','rb'))
 
 #defining a function to load zip file containing pickle file
@@ -26,7 +27,6 @@ pickle_filename = 'model.pkl'
 
 # Load the compressed pickle file into a variable
 SV = load_compressed_pickle(zip_filename, pickle_filename)
-
 
 st.title("SMS Classifier")
 
