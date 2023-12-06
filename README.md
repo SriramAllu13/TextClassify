@@ -1,7 +1,9 @@
 # SMS_CLASSIFIER
 
 ##  Introducing the SMS CLASSIFIER Model 
-I'm excited to share my latest project – a powerful SMS CLASSIFIER that boasts an impressive 98% accuracy! 📊. This SMS CLASSIFIER comes under the Text Classification which is a Problem Of NATURAL LANGUAGE PROCESSING.
+I'm excited to share my latest project – a powerful SMS CLASSIFIER that boasts an impressive 98% accuracy! 📊.
+
+This SMS CLASSIFIER comes under the Text Classification which is a Problem Of NATURAL LANGUAGE PROCESSING.
 
 ## Project Highlights:
 
@@ -41,6 +43,7 @@ Finally SVC Model is depolyed through Streamlit Sharing.
 SVC Model depolyed locally through streamlit and globally through Streamlit Sharing.
 ## App Features:
 User-Friendly Interface: The Streamlit app provides an intuitive interface for users to input messages and receive instant predictions on whether they are Spam or Non spam.
+
 Accessible Anytime, Anywhere: Once deployed, the app is accessible from any device with an internet connection, allowing you to showcase your classifier to a wider audience.
 ## Link for accessing model:
 You can my access model through : https://sriramsmsclassifier.streamlit.app/
