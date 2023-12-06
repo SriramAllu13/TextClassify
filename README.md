@@ -15,20 +15,29 @@ I'm thrilled to share that this SMS Classifier is now available for interactive 
 
 ### Algorithms used in this project are:
 1.Naive Bayes
+
 2.Random Forest Classifier
+
 3.Kneighbours Classifier
+
 4.Support Vector Classifier
+
 5.Logistic Regression
 
 Out of the above 5 mentioned algorithms Support Vector Algorithm Stood at top with an astounding 98% accuracy.
+
 Random Forest Classifier also did well with an accuracy of 97%.
 ### Detailed info of project:
 A Spam Dataset is taken from kaggle.It went through Data Processing and Model Building steps.
+
 Data Processing:
-Feature Engineering and Outlier Detection are major processes done then the data is processed through nltk library
+Feature Engineering and Outlier Detection are major processes done then the data is processed through nltk library.
+
 Model Builiding:
 It is done by the above mentioned algorithms.
+
 Finally SVC Model is depolyed through Streamlit Sharing.
+
 SVC Model depolyed locally through streamlit and globally through Streamlit Sharing.
 ## App Features:
 User-Friendly Interface: The Streamlit app provides an intuitive interface for users to input messages and receive instant predictions on whether they are Spam or Non spam.
