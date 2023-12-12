@@ -1,4 +1,4 @@
-# SMS_CLASSIFIER
+# SMS CLASSIFIER
 
 ##  Introducing the SMS CLASSIFIER Model 
 I'm excited to share my latest project – a powerful SMS CLASSIFIER that boasts an impressive 98% accuracy! 📊.
