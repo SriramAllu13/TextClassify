@@ -3,6 +3,8 @@
 ##  Introducing the SMS CLASSIFIER Model 
 I'm excited to share my latest project – a powerful SMS CLASSIFIER that boasts an impressive 98% accuracy! 📊.
 
+This SMS CLASSIFIER model has been meticulously trained to distinguish between Spam and Non spam messages of text provided.
+
 This SMS CLASSIFIER comes under the Text Classification which is a Problem Of NATURAL LANGUAGE PROCESSING.
 
 ## Project Highlights:
