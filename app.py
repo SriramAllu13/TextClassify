@@ -8,8 +8,15 @@ import string
 from nltk.corpus import stopwords
 from nltk.stem.porter import PorterStemmer
 
-nltk.download('punkt')
-nltk.download('stopwords')
+try:
+    nltk.data.find('corpora/stopwords.zip')
+except LookupError:
+    nltk.download('stopwords')
+
+try:
+    nltk.data.find('tokenizers/punkt.zip')
+except LookupError:
+    nltk.download('punkt')
 
 # Load the vector and model
 ps = PorterStemmer()
