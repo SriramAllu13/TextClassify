@@ -48,4 +48,4 @@ User-Friendly Interface: The Streamlit app provides an intuitive interface for u
 
 Accessible Anytime, Anywhere: Once deployed, the app is accessible from any device with an internet connection, allowing you to showcase your classifier to a wider audience.
 ## Link for accessing model:
-You can my access model through : https://sriramsmsclassifier.streamlit.app/
+You can my access model through : https://textclassify.streamlit.app/
