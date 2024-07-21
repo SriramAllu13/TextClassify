@@ -50,13 +50,16 @@ option = st.sidebar.radio("Select a page:", ["Text Classify", "Text Input", "Ima
 
 # Page: Text Classify
 if option == "Text Classify":
-    st.title("SMS Classifier")
-    st.write("Welcome to the SMS Classifier!")
-    st.write("This application classifies messages into spam or normal. You can use the other options to interact with the application.")
+    st.title("Text Classify🔍")
+    st.write("Welcome to the Text Classify!")
+    st.write("This application classifies messages into spam or normal.")
     st.write("### How it Works")
-    st.write("1. **Text Input**: Enter your message and get the classification.")
-    st.write("2. **Image Input**: Upload an image containing text to extract and classify.")
-    st.write("3. **Feedback**: Provide your feedback about the application.")
+    st.write("1. **Text Classification**: You can enter a text message, and the app will analyze it to determine whether it is spam or a normal message based on its content.")
+    st.write("2. **Image Input**: Upload an image containing text, and the app will extract the text from the image and classify it accordingly.")
+    st.write("3. **Feedback**: Provide feedback to help improve the accuracy and functionality of the application.")
+    st.write("### Features")
+    st.write("1. High accuracy classification using advanced machine learning models.")
+    st.write("2. User-friendly interface for both text and image input.")
 
 # Page: Text Input
 elif option == "Text Input":
@@ -70,9 +73,9 @@ elif option == "Text Input":
                 vector_inp = vector.transform([transform_sms]).toarray()
                 result = SV.predict(vector_inp)[0]
                 if result == 1:
-                    st.header('Wait a Minute, this is a SPAM!')
+                    st.header('Be Careful, Its a SPAM Message!')
                 else:
-                    st.header('Ohhh, this is a normal message.')
+                    st.header('Okay, this is a normal Message.')
         else:
             st.warning("Please enter a message for prediction.")
 
@@ -84,7 +87,6 @@ elif option == "Image Input":
     if uploaded_file is not None:
         image = Image.open(uploaded_file)
         st.image(image, caption='Uploaded Image', use_column_width=True)
-        st.write("Extracting text from image...")
         with st.spinner('Processing...'):
             # Extract text from the image using pytesseract
             text = pytesseract.image_to_string(image)
@@ -95,9 +97,9 @@ elif option == "Image Input":
                 vector_inp = vector.transform([transform_sms]).toarray()
                 result = SV.predict(vector_inp)[0]
                 if result == 1:
-                    st.header('Wait a Minute, this is a SPAM!')
+                    st.header('Be Careful, Its a SPAM Message!')
                 else:
-                    st.header('Ohhh, this is a normal message.')
+                    st.header('Okay, this is a normal Message.')
             else:
                 st.warning("No text detected in the image.")
 
