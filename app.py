@@ -60,8 +60,6 @@ if option == "Text Classify":
     st.write("### Features")
     st.write("1. High accuracy classification using advanced machine learning models.")
     st.write("2. User-friendly interface for both text and image input.")
-    st.write("Use the options on the sidebar to navigate between different functionalities and get the most out of the application.")
-
 # Page: Text Input
 elif option == "Text Input":
     st.title("Text Input")
