@@ -10,6 +10,7 @@ from nltk.corpus import stopwords
 from nltk.stem.porter import PorterStemmer
 import requests
 
+
 # Download necessary NLTK resources
 nltk.download('punkt')
 nltk.download('stopwords')
@@ -47,25 +48,10 @@ def transform_message(message):
 
 # Sidebar for navigation
 st.sidebar.title("Navigation")
-
-# Using session state to manage the active page
-if 'page' not in st.session_state:
-    st.session_state.page = "Text Classify"
-
-if st.sidebar.button('Text Classify'):
-    st.session_state.page = "Text Classify"
-
-if st.sidebar.button('Text Input'):
-    st.session_state.page = "Text Input"
-
-if st.sidebar.button('Image Input'):
-    st.session_state.page = "Image Input"
-
-if st.sidebar.button('Feedback'):
-    st.session_state.page = "Feedback"
+option = st.sidebar.radio(["Text Classify", "Text Input", "Image Input", "Feedback"])
 
 # Page: Text Classify
-if st.session_state.page == "Text Classify":
+if option == "Text Classify":
     st.title("Text Classify🔍")
     st.write("Welcome to the Text Classify!")
     st.write("This application classifies messages into spam or normal.")
@@ -79,7 +65,7 @@ if st.session_state.page == "Text Classify":
     st.write("Use the options on the sidebar to navigate between different functionalities and get the most out of the application.")
     
 # Page: Text Input
-elif st.session_state.page == "Text Input":
+elif option == "Text Input":
     st.title("Text Input")
     input_sms = st.text_area("Enter your message")
     
@@ -97,7 +83,7 @@ elif st.session_state.page == "Text Input":
             st.warning("Please enter a message for prediction.")
 
 # Page: Image Input
-elif st.session_state.page == "Image Input":
+elif option == "Image Input":
     st.title("Image Input")
     uploaded_file = st.file_uploader("Choose an image...", type=["jpg", "jpeg", "png"])
     
@@ -121,14 +107,15 @@ elif st.session_state.page == "Image Input":
                 st.warning("No text detected in the image.")
 
 # Page: Feedback
-elif st.session_state.page == "Feedback":
+elif option == "Feedback":
     st.title("Feedback")
     feedback = st.text_area("Your feedback")
     
     if st.button('Submit Feedback'):
         if feedback:
             with st.spinner('Submitting...'):
-                formspree_url = 'https://formspree.io/f/xwpevovv'
+                # Replace 'your-formspree-url' with your actual Formspree URL
+                formspree_url = 'https://formspree.io/f/your-form-id'
                 data = {'message': feedback}
                 response = requests.post(formspree_url, data=data)
                 
