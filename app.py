@@ -48,7 +48,7 @@ def transform_message(message):
 
 # Sidebar for navigation
 st.sidebar.title("Navigation")
-option = st.sidebar.radio(["Text Classify", "Text Input", "Image Input", "Feedback"])
+option = st.sidebar.radio("Select a page:",["Text Classify", "Text Input", "Image Input", "Feedback"])
 
 # Page: Text Classify
 if option == "Text Classify":
