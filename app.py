@@ -128,7 +128,7 @@ elif st.session_state.page == "Feedback":
     if st.button('Submit Feedback'):
         if feedback:
             with st.spinner('Submitting...'):
-                formspree_url = https://formspree.io/f/xwpevovv'
+                formspree_url = 'https://formspree.io/f/xwpevovv'
                 data = {'message': feedback}
                 response = requests.post(formspree_url, data=data)
                 
