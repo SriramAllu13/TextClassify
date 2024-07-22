@@ -8,6 +8,7 @@ import pytesseract
 import string
 from nltk.corpus import stopwords
 from nltk.stem.porter import PorterStemmer
+import requests
 
 # Download necessary NLTK resources
 nltk.download('punkt')
@@ -46,10 +47,25 @@ def transform_message(message):
 
 # Sidebar for navigation
 st.sidebar.title("Navigation")
-option = st.sidebar.radio("Select a page:", ["Text Classify", "Text Input", "Image Input", "Feedback"])
+
+# Using session state to manage the active page
+if 'page' not in st.session_state:
+    st.session_state.page = "Text Classify"
+
+if st.sidebar.button('Text Classify'):
+    st.session_state.page = "Text Classify"
+
+if st.sidebar.button('Text Input'):
+    st.session_state.page = "Text Input"
+
+if st.sidebar.button('Image Input'):
+    st.session_state.page = "Image Input"
+
+if st.sidebar.button('Feedback'):
+    st.session_state.page = "Feedback"
 
 # Page: Text Classify
-if option == "Text Classify":
+if st.session_state.page == "Text Classify":
     st.title("Text Classify🔍")
     st.write("Welcome to the Text Classify!")
     st.write("This application classifies messages into spam or normal.")
@@ -60,8 +76,10 @@ if option == "Text Classify":
     st.write("### Features")
     st.write("1. High accuracy classification using advanced machine learning models.")
     st.write("2. User-friendly interface for both text and image input.")
+    st.write("Use the options on the sidebar to navigate between different functionalities and get the most out of the application.")
+    
 # Page: Text Input
-elif option == "Text Input":
+elif st.session_state.page == "Text Input":
     st.title("Text Input")
     input_sms = st.text_area("Enter your message")
     
@@ -74,12 +92,12 @@ elif option == "Text Input":
                 if result == 1:
                     st.header('Be Careful, Its a SPAM Message!')
                 else:
-                    st.header('Okay, this is a normal Message.')
+                    st.header('Okay, this is a normal message.')
         else:
             st.warning("Please enter a message for prediction.")
 
 # Page: Image Input
-elif option == "Image Input":
+elif st.session_state.page == "Image Input":
     st.title("Image Input")
     uploaded_file = st.file_uploader("Choose an image...", type=["jpg", "jpeg", "png"])
     
@@ -89,7 +107,7 @@ elif option == "Image Input":
         with st.spinner('Processing...'):
             # Extract text from the image using pytesseract
             text = pytesseract.image_to_string(image)
-            st.text_area("Extracted Text", text, height=300)
+            st.text_area("Extracted Text", text)
             
             if text:
                 transform_sms = transform_message(text)
@@ -98,18 +116,25 @@ elif option == "Image Input":
                 if result == 1:
                     st.header('Be Careful, Its a SPAM Message!')
                 else:
-                    st.header('Okay, this is a normal Message.')
+                    st.header('Okay, this is a normal message.')
             else:
                 st.warning("No text detected in the image.")
 
 # Page: Feedback
-elif option == "Feedback":
+elif st.session_state.page == "Feedback":
     st.title("Feedback")
     feedback = st.text_area("Your feedback")
     
     if st.button('Submit Feedback'):
         if feedback:
-            st.success("Thank you for your feedback!")
-            # Here, you can save the feedback to a file or a database
+            with st.spinner('Submitting...'):
+                formspree_url = https://formspree.io/f/xwpevovv'
+                data = {'message': feedback}
+                response = requests.post(formspree_url, data=data)
+                
+                if response.status_code == 200:
+                    st.success("Thank you for your feedback!")
+                else:
+                    st.error("There was an error submitting your feedback. Please try again later.")
         else:
             st.warning("Please provide your feedback before submitting.")
