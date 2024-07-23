@@ -113,8 +113,7 @@ elif option == "Feedback":
     if st.button('Submit Feedback'):
         if feedback:
             with st.spinner('Submitting...'):
-                # Replace 'your-formspree-url' with your actual Formspree URL
-                formspree_url = 'https://formspree.io/f/your-form-id'
+                formspree_url = 'https://formspree.io/f/xwpevovv'
                 data = {'message': feedback}
                 response = requests.post(formspree_url, data=data)
                 
