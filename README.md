@@ -1,11 +1,11 @@
-# SMS CLASSIFIER
+# TextClassify
 
-##  Introducing the SMS CLASSIFIER Model 
-I'm excited to share my latest project – a powerful SMS CLASSIFIER that boasts an impressive 98% accuracy! 📊.
+##  Introduction
+I'm excited to share my latest project – a powerful Machine Learning Model with an impressive 98% accuracy! 📊.
 
-This SMS CLASSIFIER model has been meticulously trained to distinguish between Spam and Non spam messages of text provided.
+This model has been meticulously trained to distinguish between Spam and Non spam messages of text and image provided.
 
-This SMS CLASSIFIER comes under the Text Classification which is a Problem Of NATURAL LANGUAGE PROCESSING.
+This TextClassify comes under the Text Classification which is a Problem Of NATURAL LANGUAGE PROCESSING.
 
 ## Project Highlights:
 
@@ -15,7 +15,13 @@ This SMS CLASSIFIER comes under the Text Classification which is a Problem Of NA
 
 🎯 High Accuracy: The classifier achieved a staggering 98% accuracy during testing, demonstrating its efficacy in distinguishing between  Spam and Non spam messages. This high accuracy ensures reliable performance in real-world scenarios.
 
-I'm thrilled to share that this SMS Classifier is now available for interactive use through a Streamlit web app! 🌐
+## How it Works
+
+1.Text Classification: You can enter a text message, and the app will analyze it to determine whether it is spam or a normal message based on its content.
+
+2.Image Input: Upload an image containing text, and the app will extract the text from the image and classify it accordingly.
+
+3.Feedback: Provide feedback to help improve the accuracy and functionality of the application.
 
 ### Algorithms used in this project are:
 1.Naive Bayes
@@ -40,12 +46,13 @@ Feature Engineering and Outlier Detection are major processes done then the data
 Model Builiding:
 It is done by the above mentioned 5 algorithms.
 
-Finally SVC Model is depolyed through Streamlit Sharing.
-
-SVC Model depolyed locally through streamlit and globally through Streamlit Sharing.
 ## App Features:
 User-Friendly Interface: The Streamlit app provides an intuitive interface for users to input messages and receive instant predictions on whether they are Spam or Non spam.
 
 Accessible Anytime, Anywhere: Once deployed, the app is accessible from any device with an internet connection, allowing you to showcase your classifier to a wider audience.
+
+High accuracy classification using advanced machine learning models.
+
+User-friendly interface for both text and image input.
 ## Link for accessing model:
 You can my access model through : https://textclassify.streamlit.app/
